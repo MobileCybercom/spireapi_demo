@@ -1,0 +1,64 @@
+ body {font-family: Roboto; margin:0px;}
+ .login_page{  background: url(../images/body-bg.png); }
+ .account-container {display: block; margin: 0px auto; background: #f9f9f9; border: 1px solid #d5d5d5; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; box-shadow: 0px 0px 2px #dadada, inset 0px -3px 0px #e6e6e6; width:100%; border-right:0px; border-left:0px; }
+    .account-container h1 { margin: 0 0 .4em 0; color: #fff; background: #2a6fa8; padding: 35px 30px 15px; font-size: 28px }
+    .account-container h1 a {color:#fff; text-decoration: none; font-size: 45px; font-weight:normal;}
+    .login-container h1:before {content:inherit; margin:0px 20px 0px 0px; font-size: 40px;}
+    .login-fields { padding: 15px 30px; }
+    .login-fields p{  color: #838383; margin-top: 0; border-bottom: 1px solid #dddddd; padding:0px 0 10px; margin-bottom: 0px;  }
+    .login-fields .field { margin-bottom: 10px; }
+    /*input, textarea, select, .uneditable-input { display: inline-block; width: 210px; height: 18px; padding: 4px; margin-bottom: 9px;font-size: 13px; line-height: 18px; color: #555555; border: 1px solid #cccccc; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }*/   
+    input, textarea, select, .uneditable-input { display: inline-block; width: auto; /*height: 18px;*/ padding: 4px; margin-bottom: 0px;font-size: 13px; line-height: 18px; color: #555555; border: 1px solid #cccccc; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }   
+    .login-fields input { font-family: 'Open Sans'; font-size: 13px; color: #8e8d8d; padding: 0 15px 0px 5px; background-color: #fdfdfd; width: 100%; display: block; margin: 0; box-shadow: inset 2px 2px 4px #f1f1f1; height: 38px; }
+    .username-field { background: url(../images/input_user.png) no-repeat; }
+    .password-field { background: url(../images/password.png) no-repeat; }
+    .btn option, select.btn{ text-align: left !important }
+    
+    .login-actions {  width: 100%; float: left; margin-top: -1em; margin-bottom: 1.25em; padding: 15px 0px; }
+    span.login-checkbox { float: left; margin-top: 20px; }
+
+    span.login-checkbox { float: left; margin-top: 20px; }
+    span.login-checkbox > input[type='checkbox'] { opacity: 0; float: left; width: 15px; }
+    span.login-checkbox > input[type='checkbox'] + label { clear: none; height: 15px; display: block; padding: 0 0 0 22px; margin: 0;font-size: 12px; line-height: 1.2em; background: url(../images/check.png) no-repeat 0 0; cursor: pointer; color: #838383; }
+    span.login-checkbox > input[type='checkbox']:checked + label { background-position: 0 -15px; }
+    .btn-blue{ background: #2a6fa8; }
+    .btn-blue:hover { background:#2a6fa8; opacity:0.8 }
+    
+    /** Login Page **/
+#login {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#login .form-signin {
+    max-width: 300px;
+    padding: 19px 29px 29px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+       -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+#login .form-signin .form-signin-heading,
+#login .form-signin .checkbox {
+    margin-bottom: 10px;
+}
+#login .form-signin input[type="text"],
+#login .form-signin input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+}
+.btn-success {
+    background-color: #2a6fa8 ;
+   color: #ffffff;
+   border:0 none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.login-actions .btn-blue {font-family: Roboto; font-size: 17px; padding: 8px 0; width: 100%; display: inline-block; text-align: center; text-decoration: none;}
+.clear{clear:both}

@@ -1,0 +1,24 @@
+{
+    "companies":[
+        {
+            "valid":true,
+            "name":"kdental",
+            "needs_upgrade":false,
+            "url":"https://spireapi2.pramier.com:10880/api/v1/companies/kdental/",
+            "backup_schedules":[],
+            "disk_space":6113159352,
+            "locations":{},
+            "description":"K-Dental Inc."
+        },
+        {
+            "valid":true,
+            "name":"inspirehealth",
+            "needs_upgrade":false,
+            "url":"https://spireapi2.pramier.com:10880/api/v1/companies/inspirehealth/",
+            "backup_schedules":[],
+            "disk_space":41380024,
+            "locations":{},
+            "description":"Inspire Health Systems."
+        }
+    ]
+}

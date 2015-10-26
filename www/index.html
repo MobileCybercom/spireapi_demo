@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link href="css/styles.css" rel="stylesheet" media="screen">
+        <script src="js/jquery.js" language="JavaScript"></script>
+        <title>Test Api</title>
+    </head>
+    <body class="login_page">
+      <div class="account-container login-container">
+          <h1>Companies</h1>
+            <div class="loader">Please wait</div>
+            <div class="content clearfix" id="company_list" style="direction: none;">
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="companies"></div>
+    </body>
+</html>
+<script>
+jQuery(document).ready(function(){
+    jQuery.ajax({
+            type: "GET",
+            url: "https://spireapi2.pramier.com:10880/api/v1/companies/",
+            dataType: "json",
+            success: function(response) {
+                var responseData = jQuery.parseJSON(JSON.stringify(response));
+                var companies = responseData.companies;
+                var tr = "";
+                jQuery.each(companies,function(key,value)
+                {
+                    var td = "";
+                    td +="<p><a href='login.html'>"+value.name+"</a></p>";
+                    tr += "<div class='login-fields'>"+td+"</div>";
+                });
+                jQuery(".loader").hide();
+                jQuery("#company_list").show();
+                jQuery("#company_list").append(tr);
+            }
+        })
+});
+</script>

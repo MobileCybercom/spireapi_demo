@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Login Page</title>
+<link href="css/styles.css" rel="stylesheet" media="screen">
+<script src="js/jquery.js" language="JavaScript"></script>
+<script src="js/jquery.cookie.js" language="JavaScript"></script>
+<script type="text/javascript" src="js/base64.js"></script>
+</head>
+<body class="login_page">
+  <div class="account-container">
+    <div class="content clearfix">
+        <form action="#" method="post">
+            <h1><a href="./index.html"><</a>&nbsp;&nbsp;&nbsp;Login</h1>        
+            <div class="login-fields">
+                <p>Please provide your details</p>
+                <div class="field">
+                    <input type="text" id="username" name="username" value="" placeholder="Username" class="login username-field">
+                </div> <!-- /field -->
+               <div class="field">
+                    <input type="password" id="password" name="password" value="" placeholder="Password" class="login password-field">
+                </div> <!-- /password -->
+                <div class="login-actions">
+                <a class="button btn btn-success btn-large btn-blue" id="sign-in" href="#">Sign In</a>
+            </div>
+            </div> <!-- /login-fields -->
+            
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>
+</body>
+
+<script>
+jQuery(document).ready(function(){
+    jQuery("#sign-in").click(function(){
+        var uname = jQuery(".username-field").val();
+        var pswd = jQuery(".password-field").val();
+        login(uname,pswd);
+    });
+});
+
+    function login(username,password)
+    {
+        
+        jQuery.ajax({
+            type: "GET",
+            url: "https://spireapi2.pramier.com:10880/api/v1/companies/inspirehealth/customers/1156",
+            dataType: "json",
+            beforeSend: function (request)
+            {
+                request.setRequestHeader("Authorization", "Basic "+ Base64.encode(username+":"+password));
+            },
+            success: function(response) {
+                var responseData = JSON.stringify(response);
+                jQuery.cookie("data",responseData);
+                window.location.href = "./user-detail.html";
+            },
+            error :function(response)
+            {
+                alert("Please enter valid Username/Password.");
+            }
+        });
+        
+        
+    }
+</script>
+</html>
